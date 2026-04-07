@@ -34,47 +34,89 @@
                 <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Contato</a></li>
             </ul>
         </nav>
+
         <button class="bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] hover:from-[#27AE60] hover:to-[#16A085] transition-all hover:duration-300 p-2 rounded-2xl hover:scale-105 hidden md:flex"><a href="#" class="text-white"><i class="ri-group-fill text-white"></i> Participar do Grupo</a></button>
-        <i class="ri-menu-line text-3xl text-[#023360] cursor-pointer md:hidden"></i>
+        <i id="btn-menu" class="ri-menu-line text-3xl text-[#023360] cursor-pointer md:hidden"></i>
+        <i id="btn-close" class="ri-close-line text-3xl text-[#023360] cursor-pointer hidden md:hidden"></i>
 
     </header>
 
-    <section class="bg-[url('/src/mideas/bg-desktop.png')] bg-center bg-cover">
-        <div class="flex justify-between max-w-3xl m-auto">
-            <div>
-                <h1 class="text-5xl text-white mt-5"><b>Epidemiologia</b></h1>
-                <p class="text-white text-2xl py-2">orientada por</p>
-                <p class="text-4xl bg-gradient-to-br from-[#4ec27f] to-[#a5dfd3] bg-clip-text text-transparent py-1">Inteligência Artificial</p>
-                <div>
-                    <p class="mt-4 text-justify max-w-sm text-gray-200">A EPIBIOS desenvolve soluções inovadoras em saúde pública, integrando epidemiologia e Modelos de Linguagem (LLM´s) para transformar dados em decisões que impactam a saúde da população.</p>
+    <!--nav mobile-->
+    <nav id="nav-mobile" class="text-center md:hidden hidden gap-2">            
+        <ul class="flex flex-col gap-5">
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Início</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Sobre</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Projetos</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Equipe</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Publicações</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Contato</a></li>
+        </ul>
+        <button class="bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] hover:from-[#27AE60] hover:to-[#16A085] transition-all hover:duration-300 p-2 rounded-2xl hover:scale-105 max-w-[50%] mt-2 mb-5"><a href="#" class="text-white"><i class="ri-group-fill text-white"></i> Participar do Grupo</a></button>
+    </nav>
+
+    <section class="relative bg-[url('/src/mideas/bg-mobile.png')] md:bg-[url('/src/mideas/bg-desktop.png')] bg-center bg-cover">
+        <div class="absolute inset-0 bg-[#023360]/55" aria-hidden="true"></div>
+            <div class="relative z-10 flex justify-between md:max-w-3xl m-auto ">
+                <div class="flex flex-col items-center md:items-baseline w-screen md:max-w-3xl">
+                    <h1 class="text-5xl text-white mt-5"><b>Epidemiologia</b></h1>
+                    <p class="text-white text-2xl py-2">orientada por</p>
+                    <p class="text-4xl bg-gradient-to-br from-[#4ec27f] to-[#a5dfd3] bg-clip-text text-transparent py-1">Inteligência Artificial</p>
+                    <div>
+                        <p class="mt-4 max-w-sm m-auto text-justify text-gray-100">A EPIBIOS desenvolve soluções inovadoras em saúde pública, integrando epidemiologia e Modelos de Linguagem (LLM´s) para transformar dados em decisões que impactam a saúde da população.</p>
+                    </div>
+                    <div class="flex gap-5 mt-5 mb-5">
+                        <button class="bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] hover:from-[#27AE60] hover:to-[#16A085] transition-all hover:duration-300 p-2 rounded-2xl hover:scale-105 text-white"><i class="ri-arrow-right-line pr-2"></i>Conheça nossos Projetos</button>
+                        <button class="text-[#023360] border-2 border-[#023360] rounded-2xl p-2 bg-white hover:bg-gray-200 hover:scale-105 transition-all duration-300"><i class="ri-book-open-line text-[#023360] pr-2"></i>Ver publicações</button>
+                    </div>
                 </div>
-                <div class="flex gap-5 mt-5 mb-5">
-                    <button class="bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] hover:from-[#27AE60] hover:to-[#16A085] transition-all hover:duration-300 p-2 rounded-2xl hover:scale-105 text-white"><i class="ri-arrow-right-line pr-2"></i>Conheça nossos Projetos</button>
-                    <button class="text-[#023360] border-2 border-[#023360] rounded-2xl p-2 bg-white hover:bg-gray-200 hover:scale-105 transition-all duration-300"><i class="ri-book-open-line text-[#023360] pr-2"></i>Ver publicações</button>
-                </div>
-            </div>
-            
-            <div>
-                <img class="max-w-60 " src="src/mideas/logo-hero.png" alt="Logo EPIBIOS">
-            </div>
+                <img class="hidden md:block max-w-sm ml-[20%]" src="src/mideas/logo-hero.png" alt="Logo Epibios">
         </div>
     </section>
     
     
     
     
-    <div class="mt-8">
-        <div class="text-xl text-black flex items-center gap-2">
-            <div class="w-2 h-6 bg-[#69c991]"></div>
-            <h1 class="">Sobre a EPIBIOS</h1>
-        </div>
-        <p class="mt-2 text-justify text-black">A <b>EPIBIOS</b> é um grupo de pesquisa biomédica em epidemiologia e saúde, dedicado ao desenvolvimento de soluções inovadoras para desafios de saúde pública, com ênfase na integração de inteligência artificial e modelos de linguagem em projetos epidemiológicos.</p>
-    </div>
+    <main class="ml-[10%] mr-[10%] mb-[10%]">
+        <section>
+            <div class="mt-8">
+                <div class="text-xl text-black flex items-center gap-2 ">
+                    <div class="w-2 h-6 bg-[#69c991]"></div>
+                    <h1 class="text-[#023360] font-bold">Sobre a EPIBIOS</h1>
+                </div>
+                <p class="mt-2 text-justify text-black">A <b>EPIBIOS</b> é um grupo de pesquisa biomédica em epidemiologia e saúde, dedicado ao desenvolvimento de soluções inovadoras para desafios de saúde pública, com ênfase na integração de inteligência artificial e modelos de linguagem em projetos epidemiológicos.</p>
+            </div>
+
+            <div class="border-2 flex flex-col md:flex-row grid-cols-3 gap-5 mt-5">
+                <div class="border-2 bg-cyan-100 rounded-2xl text-center pb-5 ">
+                    <i class="ri-focus-2-line text-4xl bg-gradient-to-br from-[#047a35] to-[#1ABC9C] bg-clip-text text-transparent"></i>
+                    <h2 class="font-bold text-xl">Missão</h2>
+                    <p class="max-w-[90%] m-auto">Produzir conhecimento científico e tecnológico que auxilie na tomada de decisão em saúde pública.</p>
+                </div>
+                <div class="border-2 bg-amber-100 rounded-2xl pb-5 text-center">
+                    <i class="ri-lightbulb-flash-fill text-4xl bg-gradient-to-br from-[#0ccc5c] to-[#0a3fb3] bg-clip-text text-transparent"></i>
+                    <h2 class="font-bold text-xl">Diferencial</h2>
+                    <p class="max-w-[90%] m-auto">Integração pioneira entre epidemiologia, dados em saúde e Large Language Models.</p>
+                </div>
+                <div class="border-2 bg-blue-100 rounded-2xl pb-5 text-center">
+                    <i class="ri-earth-fill text-4xl bg-gradient-to-br from-[#0a3fb3] to-[#7793ce] bg-clip-text text-transparent"></i>
+                    <h2 class="font-bold text-xl">Impacto</h2>
+                    <p class="max-w-[90%] m-auto">Desenvolvendo ferramentas que geram impacto real na saúde da população e no SUS.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10">
+            <div class="text-xl text-black flex items-center gap-2 ">
+                <div class="w-2 h-6 bg-[#69c991]"></div>
+                <h1 class="text-[#023360] font-bold">Oque fazemos</b></h1>
+            </div>
+        </section>
+    </main>
+  
     
-    
 
 
 
-
+<script src="src/scripts/script.js"></script>
 </body>
 </html>
