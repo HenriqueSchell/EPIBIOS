@@ -27,11 +27,10 @@
         <nav class="items-center hidden md:flex gap-2">            
             <ul class="flex gap-5">
                 <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Início</a></li>
-                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Sobre</a></li>
-                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Projetos</a></li>
-                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Equipe</a></li>
-                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Publicações</a></li>
-                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Contato</a></li>
+                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#sobre">Sobre</a></li>
+                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#nossos-projetos">Projetos</a></li>
+                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#equipe">Equipe</a></li>
+                <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#contato">Contato</a></li>
             </ul>
         </nav>
 
@@ -45,18 +44,17 @@
     <nav id="nav-mobile" class="text-center md:hidden hidden gap-2">            
         <ul class="flex flex-col gap-5">
             <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Início</a></li>
-            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Sobre</a></li>
-            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Projetos</a></li>
-            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Equipe</a></li>
-            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Publicações</a></li>
-            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#">Contato</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#sobre">Sobre</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#nossos-projetos">Projetos</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#equipe">Equipe</a></li>
+            <li class="hover:text-[#2ECC71] hover:duration-300 transition-all"><a href="#contato">Contato</a></li>
         </ul>
         <button class="bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] hover:from-[#27AE60] hover:to-[#16A085] transition-all hover:duration-300 p-2 rounded-2xl hover:scale-105 max-w-[50%] mt-2 mb-5"><a href="#" class="text-white"><i class="ri-group-fill text-white"></i> Participar do Grupo</a></button>
     </nav>
 
     <section class="relative bg-[url('/src/mideas/bg-mobile.png')] md:bg-[url('/src/mideas/bg-desktop.png')] bg-center bg-cover">
         <div class="absolute inset-0 bg-[#023360]/55" aria-hidden="true"></div>
-            <div class="relative z-10 flex justify-between md:max-w-3xl m-auto ">
+            <div class="relative z-10 flex justify-between md:max-w-3xl m-auto">
                 <div class="flex flex-col items-center md:items-baseline w-screen md:max-w-3xl">
                     <h1 class="text-5xl text-white mt-5"><b>Epidemiologia</b></h1>
                     <p class="text-white text-2xl py-2">orientada por</p>
@@ -69,7 +67,7 @@
                         <button class="text-[#023360] border-2 border-[#023360] rounded-2xl p-2 bg-white hover:bg-gray-200 hover:scale-105 transition-all duration-300"><i class="ri-book-open-line text-[#023360] pr-2"></i>Ver publicações</button>
                     </div>
                 </div>
-                <img class="hidden md:block max-w-sm ml-[20%]" src="src/mideas/logo-hero.png" alt="Logo Epibios">
+                <img class="hidden md:flex h-[300px] mt-16" src="src/mideas/logo-hero.png" alt="Logo Epibios">
         </div>
     </section>
     
@@ -77,7 +75,7 @@
     
     
     <main class="ml-[10%] mr-[10%] mb-[10%]">
-        <section>
+        <section id="sobre">
             <div class="mt-8">
                 <div class="text-xl text-black flex items-center gap-2 ">
                     <div class="w-2 h-6 bg-[#69c991]"></div>
@@ -159,12 +157,268 @@
                 <div class="w-2 h-6 bg-[#69c991]"></div>
                 <h1 class="text-[#023360] font-bold">Nossos Projetos</h1>
             </div>
+
+            <div class="grid md:grid-cols-2 gap-5 mt-5">
+                <!--Card 1-->
+                <div class="flex items-stretch overflow-hidden bg-gray-300 rounded-2xl m-auto">
+                    <div class="w-28 sm:w-36 shrink-0">
+                        <img src="src/mideas/projeto-hepatites.png" alt="Projeto Hepatites" class="h-full w-full object-cover rounded-l-2xl">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 flex-1 justify-center">
+                        <h1 class="text-lg font-bold">Análise Epidemiológica das Hepatites B e C no Município de Osório/RS (2003-2023)</h1>
+                        <p class="text-justify">Análise dos casos de hepatites B e C no município de Osório, destacando alta incidência e desafios na prevenção.</p>
+                        <button data-abrir-modal="modal-hepatites" class="bg-gradient-to-bl from-[#91ade9] to-[#379b6c] rounded-2xl p-1.5 text-white m-auto cursor-pointer hover:scale-105 transition-all duration-300">Saiba mais</button>
+                    </div>
+                </div>
+               
+                <!--Card 2 - CardiHack-->
+                <div class="flex items-stretch overflow-hidden bg-gray-300 rounded-2xl m-auto">
+                    <div class="w-28 sm:w-36 shrink-0">
+                        <img src="src/mideas/cardhack.png" alt="Projeto Myopredict CardiHack" class="h-full w-full object-cover rounded-l-2xl">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 flex-1 justify-center">
+                        <h1 class="text-lg font-bold">Myopredict — CardiHack Challenge</h1>
+                        <p class="text-justify">Modelagem de risco de eventos cardíacos adversos e gravidade em cardiomiopatia hipertrófica com scores poligênicos e aprendizado de máquina.</p>
+                        <button data-abrir-modal="modal-cardihack" class="bg-gradient-to-bl from-[#91ade9] to-[#379b6c] rounded-2xl p-1.5 text-white m-auto cursor-pointer hover:scale-105 transition-all duration-300">Saiba mais</button>
+                    </div>
+                </div>
+
+                <!--Card 3 - SaúdeLitoral-->
+                <div class="flex items-stretch overflow-hidden bg-gray-300 rounded-2xl m-auto">
+                    <div class="w-28 sm:w-36 shrink-0">
+                        <img src="src/mideas/phone.png" alt="Projeto SaúdeLitoral" class="h-full w-full object-cover rounded-l-2xl">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 flex-1 justify-center">
+                        <span class="w-fit rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-800">Em andamento</span>
+                        <h1 class="text-lg font-bold">SaúdeLitoral — IA para regulação no litoral norte do RS</h1>
+                        <p class="text-justify">Ecossistema digital com IA generativa e inteligência coletiva para orientar fluxos assistenciais e mitigar o colapso sazonal do SUS no verão.</p>
+                        <button data-abrir-modal="modal-saudelitoral" class="bg-gradient-to-bl from-[#91ade9] to-[#379b6c] rounded-2xl p-1.5 text-white m-auto cursor-pointer hover:scale-105 transition-all duration-300">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            
         </section>
+
+        <section id="equipe" class="mt-10">
+            <div class="text-xl text-black flex items-center gap-2">
+                <div class="w-2 h-6 bg-[#69c991]"></div>
+                <h1 class="text-[#023360] font-bold">Equipe</h1>
+            </div>
+
+            <div class="mt-5 flex flex-wrap justify-center gap-2 rounded-full bg-gray-100 p-1 max-w-md mx-auto md:max-w-xl">
+                <button type="button" data-equipe-tab="coordenacao" class="equipe-tab flex-1 min-w-[7rem] rounded-full px-4 py-2 text-sm font-semibold transition-all bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] text-white shadow-sm">Coordenação</button>
+                <button type="button" data-equipe-tab="pesquisadores" class="equipe-tab flex-1 min-w-[7rem] rounded-full px-4 py-2 text-sm font-semibold text-[#023360] transition-all hover:bg-white/60">Pesquisadores</button>
+            </div>
+
+            <!-- Coordenação -->
+            <div data-equipe-panel="coordenacao" class="mt-6 gap-5 flex">
+                <article class="flex items-stretch gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm m-auto">
+                    <img src="src/mideas/roerta.jpeg" alt="Roberta Oriques Becker" class="h-28 w-28 shrink-0 rounded-xl object-cover">
+                    <div class="flex flex-col justify-center gap-2 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="font-bold text-[#023360]">Roberta Oriques Becker</h3>
+                            <span class="rounded-full bg-cyan-100 px-2 py-0.5 text-xs font-semibold text-[#023360]">Coordenadora</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Epidemiologia &amp; pesquisa aplicada em saúde</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://lattes.cnpq.br/0003846222379954" data-link-lattes="roberta" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-article-line"></i> Lattes</a>
+                            <a href="https://github.com/Trustii-team" data-link-github="roberta" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-github-fill"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pesquisadores -->
+            <div data-equipe-panel="pesquisadores" class="mt-6 hidden grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <article class="flex items-stretch gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                    <img src="src/mideas/henrique.jpeg" alt="Henrique Dutra Schell" class="h-28 w-28 shrink-0 rounded-xl object-cover">
+                    <div class="flex flex-col justify-center gap-2 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="font-bold text-[#023360]">Henrique Schell</h3>
+                            <span class="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-[#023360]">Pesquisador</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Epidemiologia, IA &amp; análise de dados em saúde</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://lattes.cnpq.br/4726525534957952" data-link-lattes="henrique" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-article-line"></i> Lattes</a>
+                            <a href="https://github.com/HenriqueSchell" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-github-fill"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="flex items-stretch gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                    <img src="src/mideas/gabriel.jpeg" alt="Integrante da equipe" class="h-28 w-28 shrink-0 rounded-xl object-cover">
+                    <div class="flex flex-col justify-center gap-2 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="font-bold text-[#023360]">Gabriel Borges Kiener</h3>
+                            <span class="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-[#023360]">Pesquisador</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Bioinformática &amp; genética populacional</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://lattes.cnpq.br/4726525534957952" data-link-lattes="henrique" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-article-line"></i> Lattes</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="flex items-stretch gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                    <img src="src/mideas/sabrina.jpeg" alt="Integrante da equipe" class="h-28 w-28 shrink-0 rounded-xl object-cover">
+                    <div class="flex flex-col justify-center gap-2 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="font-bold text-[#023360]">Dra. Fernanda Rocha</h3>
+                            <span class="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-[#023360]">Pesquisadora</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Modelagem estatística &amp; machine learning</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://lattes.cnpq.br/4726525534957952" data-link-lattes="henrique" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-article-line"></i> Lattes</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="flex items-stretch gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                    <img src="src/mideas/menina.jpeg" alt="Integrante da equipe" class="h-28 w-28 shrink-0 rounded-xl object-cover">
+                    <div class="flex flex-col justify-center gap-2 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="font-bold text-[#023360]">Ana Paula Ribeiro</h3>
+                            <span class="rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-[#023360]">Aluna</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Iniciação científica em epidemiologia</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://lattes.cnpq.br/4726525534957952" data-link-lattes="henrique" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-article-line"></i> Lattes</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="flex items-stretch gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                    <img src="src/mideas/todos.jpeg" alt="Integrantes da equipe" class="h-28 w-28 shrink-0 rounded-xl object-cover">
+                    <div class="flex flex-col justify-center gap-2 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 class="font-bold text-[#023360]">Ana Karolina Ciechovicz Guarienti</h3>
+                            <span class="rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-[#023360]">Aluno</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Ciência de dados aplicada à saúde</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://lattes.cnpq.br/4726525534957952" data-link-lattes="henrique" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-[#379b6c] hover:text-[#2ECC71] transition-colors"><i class="ri-article-line"></i> Lattes</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-10 rounded-2xl bg-[#023360] px-6 py-10 text-center text-white">
+            <h2 class="text-2xl font-bold md:text-3xl">Nosso impacto</h2>
+            <div class="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
+                <div>
+                    <p class="text-3xl font-bold text-[#2ECC71]">10+</p>
+                    <p class="mt-1 text-sm text-gray-200">Projetos desenvolvidos</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-[#2ECC71]">25+</p>
+                    <p class="mt-1 text-sm text-gray-200">Alunos formados</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-[#2ECC71]">15</p>
+                    <p class="mt-1 text-sm text-gray-200">Publicações</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-[#2ECC71]">5</p>
+                    <p class="mt-1 text-sm text-gray-200">Instituições parceiras</p>
+                </div>
+            </div>
+        </section>
+
     </main>
-  
-    
 
+    <section id="contato" class="bg-[#023360] px-[10%] py-12 text-center">
+        <h2 class="text-2xl font-bold text-white md:text-3xl">Vamos transformar a saúde juntos?</h2>
+        <p class="mt-3 text-gray-200">Entre em contato ou participe do grupo de pesquisa EPIBIOS.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+            <a href="#" class="rounded-2xl border-2 border-white px-5 py-2.5 text-white transition-all hover:bg-white/10">Enviar mensagem</a>
+            <a href="#" class="rounded-2xl bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] px-5 py-2.5 text-white transition-all hover:scale-105">Quero participar</a>
+        </div>
+    </section>
 
+    <footer class="flex flex-col items-center justify-between gap-4 border-t border-gray-200 px-[10%] py-6 md:flex-row">
+        <div class="flex items-center gap-2">
+            <img src="src/mideas/logo-epibios-nav-favcon.png" alt="Logo EPIBIOS" class="w-8 h-8">
+            <span class="font-bold text-[#023360]">EPIBIOS</span>
+        </div>
+        <p class="text-sm text-gray-600 text-center">&copy; 2026 EPIBIOS. Todos os direitos reservados.</p>
+        <div class="flex gap-4 text-xl text-[#023360]">
+            <a href="https://github.com/Trustii-team" target="_blank" rel="noopener noreferrer" class="hover:text-[#2ECC71] transition-colors" aria-label="GitHub EPIBIOS"><i class="ri-github-fill"></i></a>
+            <a href="mailto:1905.robertaoriques@cnec.br" class="hover:text-[#2ECC71] transition-colors" aria-label="E-mail"><i class="ri-mail-fill"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal Hepatites -->
+    <div id="modal-hepatites" data-modal class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-hepatites-titulo">
+        <div data-modal-overlay="modal-hepatites" class="absolute inset-0 bg-[#023360]/70 backdrop-blur-sm"></div>
+        <div class="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <button data-fechar-modal="modal-hepatites" type="button" class="absolute top-3 right-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#023360] shadow-md transition-all hover:scale-105 hover:bg-gray-100" aria-label="Fechar modal">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+            <img src="src/mideas/projeto-hepatites.png" alt="Projeto Hepatites" class="h-48 w-full object-cover rounded-t-2xl sm:h-56">
+            <div class="p-6">
+                <h2 id="modal-hepatites-titulo" class="text-xl font-bold text-[#023360] pr-8">Análise Epidemiológica das Hepatites B e C no Município de Osório/RS (2003-2023)</h2>
+                <p class="mt-4 text-justify text-gray-700">Este projeto investiga a distribuição temporal e espacial dos casos de hepatites B e C notificados no município de Osório, Rio Grande do Sul, no período de 2003 a 2023, com base em dados de vigilância epidemiológica.</p>
+                <p class="mt-3 text-justify text-gray-700">O estudo evidencia padrões de alta incidência na população local e aponta desafios relevantes para a prevenção, o diagnóstico precoce e o encaminhamento adequado dos casos no âmbito do SUS.</p>
+                <ul class="mt-4 space-y-2 text-gray-700">
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Análise de tendências e perfil epidemiológico dos casos</span></li>
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Identificação de fatores associados à ocorrência das hepatites B e C</span></li>
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Subsídios para políticas públicas de prevenção e vigilância em saúde</span></li>
+                </ul>
+                <a href="src/mideas/Artigo_An%C3%A1lise_Epidemiol%C3%B3gicas_Hepatites_B_C_Os%C3%B3rio.docx" download="Artigo_Hepatites_B_C_Osorio.docx" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] px-5 py-2.5 text-white transition-all hover:scale-105 hover:from-[#27AE60] hover:to-[#16A085]">
+                    <i class="ri-file-download-line text-lg"></i>
+                    Baixar artigo (DOCX)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CardiHack -->
+    <div id="modal-cardihack" data-modal class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-cardihack-titulo">
+        <div data-modal-overlay="modal-cardihack" class="absolute inset-0 bg-[#023360]/70 backdrop-blur-sm"></div>
+        <div class="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <button data-fechar-modal="modal-cardihack" type="button" class="absolute top-3 right-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#023360] shadow-md transition-all hover:scale-105 hover:bg-gray-100" aria-label="Fechar modal">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+            <img src="src/mideas/cardhack.png" alt="Projeto Myopredict CardiHack" class="h-48 w-full object-cover rounded-t-2xl sm:h-56">
+            <div class="p-6">
+                <h2 id="modal-cardihack-titulo" class="text-xl font-bold text-[#023360] pr-8">Myopredict — CardiHack Challenge</h2>
+                <p class="mt-4 text-justify text-gray-700">Participação no CardiHack Challenge com o projeto Myopredict, voltado à predição de eventos cardíacos adversos maiores (MACE) e de um escore ordinal de gravidade em pacientes com cardiomiopatia hipertrófica.</p>
+                <p class="mt-3 text-justify text-gray-700">A abordagem integra modelagem de risco poligênico (PRS), regressão por ensemble e discretização ordinal calibrada, preservando a estrutura clínica dos desfechos e lidando com desbalanceamento de classes e dados multimodais (clínica, imagem e genética).</p>
+                <ul class="mt-4 space-y-2 text-gray-700">
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Construção de Polygenic Risk Score com variantes selecionadas por LightGBM</span></li>
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Modelagem conjunta de severidade e risco de MACE com validação robusta</span></li>
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Pipeline documentado com foco em coerência ordinal e generalização clínica</span></li>
+                </ul>
+                <a href="src/mideas/Documentation%20Myopredict%20CardiHack%20Challenge%20(1).pdf" download="Myopredict_CardiHack_Documentation.pdf" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] px-5 py-2.5 text-white transition-all hover:scale-105 hover:from-[#27AE60] hover:to-[#16A085]">
+                    <i class="ri-file-download-line text-lg"></i>
+                    Baixar documentação (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SaúdeLitoral -->
+    <div id="modal-saudelitoral" data-modal class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-saudelitoral-titulo">
+        <div data-modal-overlay="modal-saudelitoral" class="absolute inset-0 bg-[#023360]/70 backdrop-blur-sm"></div>
+        <div class="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <button data-fechar-modal="modal-saudelitoral" type="button" class="absolute top-3 right-3 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#023360] shadow-md transition-all hover:scale-105 hover:bg-gray-100" aria-label="Fechar modal">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+            <img src="src/mideas/phone.png" alt="Projeto SaúdeLitoral" class="h-48 w-full object-cover rounded-t-2xl sm:h-56">
+            <div class="p-6">
+                <span class="inline-flex rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-800">Em andamento</span>
+                <h2 id="modal-saudelitoral-titulo" class="mt-2 text-xl font-bold text-[#023360] pr-8">SaúdeLitoral — IA para regulação no litoral norte do RS</h2>
+                <p class="mt-4 text-justify text-gray-700">O projeto SaúdeLitoral propõe uma intervenção em saúde digital para orientar e orquestrar a assistência pré-hospitalar na rede de atenção do litoral norte gaúcho, região com vulnerabilidade sazonal crítica no período de verão.</p>
+                <p class="mt-3 text-justify text-gray-700">O ecossistema combina IA generativa (MedGemma), modelagem espacial com dados do CNES, triagem pelo Sistema de Manchester e inteligência coletiva via crowdsourcing para roteamento multicritério e redução da hiperutilização de urgências.</p>
+                <ul class="mt-4 space-y-2 text-gray-700">
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Extração de sintomas por PLN e triagem clínica automatizada</span></li>
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Mapa dinâmico de demanda para direcionar pacientes a unidades menos saturadas</span></li>
+                    <li class="flex items-start gap-2"><i class="ri-checkbox-circle-fill mt-0.5 shrink-0 text-[#2ECC71]"></i><span>Validação prospectiva em andamento com amostra populacional da região</span></li>
+                </ul>
+                <a href="src/mideas/Resumo_Pesquisa.docx" download="Resumo_Pesquisa_SaudeLitoral.docx" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-[#2ECC71] to-[#1ABC9C] px-5 py-2.5 text-white transition-all hover:scale-105 hover:from-[#27AE60] hover:to-[#16A085]">
+                    <i class="ri-file-download-line text-lg"></i>
+                    Baixar resumo da pesquisa (DOCX)
+                </a>
+            </div>
+        </div>
+    </div>
 
 <script src="src/scripts/script.js"></script>
 </body>
