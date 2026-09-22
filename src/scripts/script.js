@@ -1,22 +1,3 @@
-// Atualize com as URLs completas do Lattes e GitHub
-const LINKS_EQUIPE = {
-    henrique: {
-        lattes: '',
-        github: 'https://github.com/HenriqueSchell',
-    },
-    roberta: {
-        lattes: '',
-        github: '',
-    },
-}
-
-Object.entries(LINKS_EQUIPE).forEach(([id, links]) => {
-    const lattesEl = document.querySelector(`[data-link-lattes="${id}"]`)
-    const githubEl = document.querySelector(`[data-link-github="${id}"]`)
-    if (lattesEl && links.lattes) lattesEl.href = links.lattes
-    if (githubEl && links.github) githubEl.href = links.github
-})
-
 const equipeTabs = document.querySelectorAll('[data-equipe-tab]')
 const equipePanels = document.querySelectorAll('[data-equipe-panel]')
 const classeTabBase = 'equipe-tab flex-1 min-w-[7rem] rounded-full px-4 py-2 text-sm font-semibold transition-all'
@@ -83,4 +64,8 @@ document.addEventListener('keydown', (e) => {
     document.querySelectorAll('[data-modal]').forEach((modal) => {
         if (!modal.classList.contains('hidden')) fecharModal(modal.id)
     })
+})
+
+document.querySelectorAll("[data-ver-equipe]").forEach(link => {
+    link.addEventListener("click", () => ativarEquipeTab("pesquisadores"))
 })

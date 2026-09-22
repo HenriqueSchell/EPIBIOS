@@ -1,1 +1,57 @@
-@import 'tailwindcss';
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 24px; }
+#nossos-projetos > .grid > div { width: 100%; height: 100%; background: #f1f5f4; border: 1px solid #dce8e4; }
+#nossos-projetos > .grid { align-items: stretch; }
+#nossos-projetos > .grid > div { margin: 0; min-width: 0; }
+#nossos-projetos > .grid > div > div:last-child { min-width: 0; justify-content: flex-start; gap: 16px; padding: 24px; }
+#nossos-projetos [data-abrir-modal] { align-self: flex-start; margin: auto 0 0; padding: 8px 20px; }
+#nossos-projetos p { text-align: left; line-height: 1.65; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 10px 0; }
+.profile-link { color: #176c4a; font-size: .875rem; font-weight: 600; overflow-wrap: anywhere; }
+.profile-link[href]:hover { text-decoration: underline; }
+.profile-link[aria-disabled="true"] { color: #64748b; cursor: default; }
+.team-grid, .completed-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.member-card, .coordinator-card { display: flex; align-items: flex-start; gap: 20px; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; box-shadow: 0 2px 8px #02336006; }
+.member-photo { width: 96px; height: 112px; flex-shrink: 0; border-radius: 12px; object-fit: cover; }
+.photo-placeholder { display: grid; place-items: center; background: #edf6f4; color: #6a9389; font-size: 36px; }
+.member-content { min-width: 0; }
+.member-card { height: 100%; min-width: 0; align-items: stretch; }
+.member-card .member-content { display: flex; flex: 1; flex-direction: column; gap: 16px; }
+.member-card .profile-links { margin: auto 0 0; align-items: center; }
+.member-card .profile-links { gap: 8px; }
+.member-card .profile-links > span { color: #64748b; font-size: .875rem; }
+.member-course { font-weight: 400; }
+.member-content h3, .completed-card h3 { color: #023360; font-weight: 700; line-height: 1.5; }
+.member-content p { margin-top: 8px; color: #475569; line-height: 1.7; font-size: .925rem; }
+.project-label { display: inline-block; margin: 8px 0; color: #236348; background: #edf8f1; border-radius: 6px; padding: 4px 8px; font-size: .75rem; font-weight: 600; }
+.completed-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.completed-card { padding: 20px; border: 1px solid #dce8e4; border-radius: 16px; background: #f8fbfa; }
+.award-card { padding: 32px; border: 1px solid #cedfd9; border-radius: 20px; background: linear-gradient(135deg, #f0faf5, #f2f6fc); }
+.award-label { display: inline-flex; align-items: center; gap: 8px; color: #876314; font-size: .875rem; font-weight: 700; }
+.award-card h3 { margin: 12px 0; font-size: 1.4rem; font-weight: 700; color: #023360; }
+.award-card p { line-height: 1.8; color: #334155; }
+.competition-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.competition-metrics > div { padding: 14px; border-radius: 10px; background: #ffffffb3; border: 1px solid #dce8e4; }
+.competition-metrics dt { color: #526174; font-size: .75rem; overflow-wrap: anywhere; }
+.competition-metrics dd { margin-top: 4px; color: #023360; font-size: 1.2rem; font-weight: 700; }
+.project-members { padding-left: 20px; margin: 12px 0; list-style: disc; color: #475569; line-height: 1.8; }
+@media (min-width: 768px) {
+    #nossos-projetos > .grid > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .team-grid > .member-card { grid-column: span 2; }
+    .team-grid > .member-card:last-child:nth-child(odd) { grid-column: 2 / span 2; }
+}
+@media (max-width: 767px) {
+    main { margin-left: 6% !important; margin-right: 6% !important; }
+    .team-grid, .completed-grid { grid-template-columns: 1fr; }
+    .coordinator-card { flex-direction: column; }
+    .member-card, .coordinator-card, .award-card { padding: 20px; }
+    .competition-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #nossos-projetos > .grid > div { flex-direction: column; }
+    #nossos-projetos > .grid > div > div:first-child { width: 100%; height: 160px; }
+    #nossos-projetos img { border-radius: 0; }
+    body > section:first-of-type h1 { font-size: clamp(2rem, 9vw, 3rem); }
+    body > section:first-of-type .text-4xl { font-size: clamp(1.5rem, 7vw, 2.25rem); }
+}
+@media (max-width: 380px) { .member-card { flex-direction: column; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
