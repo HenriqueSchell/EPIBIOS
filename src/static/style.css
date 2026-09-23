@@ -12,7 +12,7 @@ section[id] { scroll-margin-top: 24px; }
 .profile-link[aria-disabled="true"] { color: #64748b; cursor: default; }
 .team-grid, .completed-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .member-card, .coordinator-card { display: flex; align-items: flex-start; gap: 20px; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; box-shadow: 0 2px 8px #02336006; }
-.member-photo { width: 96px; height: 112px; flex-shrink: 0; border-radius: 12px; object-fit: cover; }
+.member-photo { display: block; width: 96px; height: 112px; flex-shrink: 0; align-self: flex-start; border-radius: 12px; object-fit: cover; object-position: center 30%; }
 .photo-placeholder { display: grid; place-items: center; background: #edf6f4; color: #6a9389; font-size: 36px; }
 .member-content { min-width: 0; }
 .member-card { height: 100%; min-width: 0; align-items: stretch; }
@@ -36,10 +36,15 @@ section[id] { scroll-margin-top: 24px; }
 .competition-metrics dd { margin-top: 4px; color: #023360; font-size: 1.2rem; font-weight: 700; }
 .project-members { padding-left: 20px; margin: 12px 0; list-style: disc; color: #475569; line-height: 1.8; }
 @media (min-width: 768px) {
+    /* Give portraits more detail on desktop without stretching them with the text. */
+    .member-photo { width: 120px; height: 140px; }
     #nossos-projetos > .grid > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .team-grid > .member-card { grid-column: span 2; }
     .team-grid > .member-card:last-child:nth-child(odd) { grid-column: 2 / span 2; }
+}
+@media (min-width: 1024px) {
+    .member-photo { width: 144px; height: 168px; }
 }
 @media (max-width: 767px) {
     main { margin-left: 6% !important; margin-right: 6% !important; }
